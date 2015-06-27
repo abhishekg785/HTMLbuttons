@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>buttonclick</title>
+	<style>
+		
+
+	
+		
+
+		
+			button
+			{
+				height:100px;
+				width:100px;
+				border-radius:50%;
+				background-color:#fcc;
+				border:none;
+				position:absolute;
+				left:200px;
+				top:350px;
+				box-shadow:0px 4px 0px pink;
+				background-color:antiquewhite;
+				font-family:verdana;
+			color:black;
+				margin:0px;
+				padding:0px;
+			}
+		button:active{
+			transform:translateY(2px);
+			box-shadow: 0px 1px 0px pink;
+			
+		}
+		#square{
+			height:500px;
+			width:500px;
+			background-color:grey;
+		}
+		#text{
+			height:100px;
+			width:400px;
+			background-color:#cff;
+			position: absolute;
+			left:50px;
+			top:50px;
+		}
+		
+		.t1{
+			background-color:green;
+			height:46px;
+			position:absolute;
+			width:50px;
+			float:left;
+		}
+		</style>
+	</head>
+	<body>
+	<div id="square">
+		<div id="text">
+			
+		</div>
+		<div class="t1" style="margin-left:42px">
+			
+		</div>
+		<div class="t1" style="margin-left:393px">
+			
+		</div>
+		<button onmousedown="colorchange()" onmouseup="color()">Click</button>
+	</div>
+	<script>
+		var name=prompt("enter your name");
+		var id1=document.getElementById("text");
+		if(name==" ")
+		{
+			id1.innerHTML+="<p>hey!!!!Enter your name!!!</p>";
+		}
+		else
+		{
+		id1.innerHTML+="hiii"+ " "+" "+name;
+		}
+		id1.style.textAlign="center";
+		id1.style.fontSize="20"+"px";
+		
+    function colorchange()
+    {
+    	var c1=document.getElementsByClassName("t1");
+    	
+    	c1.style.backgroundColor="yellow";
+    }
+    function color()
+    {
+    		var id1=document.getElementById("text");
+    	id1.style.backgroundColor="#CFF";
+    	id1.style.color="black";
+    }
+	</script>
+	</body>
+	
+</html>
